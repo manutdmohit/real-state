@@ -1,14 +1,14 @@
-import React, { useContext, useState } from "react";
-import SearchBar from "../../components/SearchBar/SearchBar";
-import useProperties from "../../hooks/useProperties";
-import { PuffLoader } from "react-spinners";
-import PropertyCard from "../../components/PropertyCard/PropertyCard";
-import "../Properties/Properties.css";
-import UserDetailContext from "../../context/UserDetailContext";
+import React, { useContext, useState } from 'react';
+import SearchBar from '../../components/SearchBar/SearchBar';
+import useProperties from '../../hooks/useProperties';
+import { PuffLoader } from 'react-spinners';
+import PropertyCard from '../../components/PropertyCard/PropertyCard';
+import '../Properties/Properties.css';
+import UserDetailContext from '../../context/UserDetailContext';
 
 const Bookings = () => {
   const { data, isError, isLoading } = useProperties();
-  const [filter, setFilter] = useState("");
+  const [filter, setFilter] = useState('');
   const {
     userDetails: { bookings },
   } = useContext(UserDetailContext);
@@ -23,7 +23,7 @@ const Bookings = () => {
 
   if (isLoading) {
     return (
-      <div className="wrapper flexCenter" style={{ height: "60vh" }}>
+      <div className="wrapper flexCenter" style={{ height: '60vh' }}>
         <PuffLoader
           height="80"
           width="80"

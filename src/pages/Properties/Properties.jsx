@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import SearchBar from "../../components/SearchBar/SearchBar";
-import "./Properties.css";
-import useProperties from "../../hooks/useProperties";
-import { PuffLoader } from "react-spinners";
-import PropertyCard from "../../components/PropertyCard/PropertyCard";
+import React, { useState } from 'react';
+import SearchBar from '../../components/SearchBar/SearchBar';
+import './Properties.css';
+import useProperties from '../../hooks/useProperties';
+import { PuffLoader } from 'react-spinners';
+import PropertyCard from '../../components/PropertyCard/PropertyCard';
 const Properties = () => {
   const { data, isError, isLoading } = useProperties();
-  const [filter, setFilter] = useState("");
+  const [filter, setFilter] = useState('');
   if (isError) {
     return (
       <div className="wrapper">
@@ -17,7 +17,7 @@ const Properties = () => {
 
   if (isLoading) {
     return (
-      <div className="wrapper flexCenter" style={{ height: "60vh" }}>
+      <div className="wrapper flexCenter" style={{ height: '60vh' }}>
         <PuffLoader
           height="80"
           width="80"

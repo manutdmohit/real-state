@@ -42,8 +42,9 @@ const Header = () => {
             style={getMenuStyles(menuOpened)}
           >
             <NavLink to="/properties">Properties</NavLink>
+            <NavLink to="/contacts">Contact</NavLink>
 
-            <a href="mailto:test@gmail.com">Contact</a>
+            {/* <a href="mailto:test@gmail.com">Contact</a> */}
 
             {/* add property */}
             <div onClick={handleAddPropertyClick}>Add Property</div>
