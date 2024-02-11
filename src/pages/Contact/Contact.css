@@ -36,7 +36,7 @@ textarea {
   height: 150px;
 }
 
-input[type='submit'] {
+#submit {
   background: linear-gradient(to right, #007bff, #0056b3);
   color: #fff;
   padding: 12px 20px;
@@ -47,12 +47,12 @@ input[type='submit'] {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-input[type='submit']:hover {
+#submit:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
 }
 
-input[type='submit']:active {
+#submit:active {
   transform: translateY(0);
   box-shadow: none;
 }
