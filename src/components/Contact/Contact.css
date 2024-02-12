@@ -18,7 +18,7 @@
   gap: 1.5rem;
 }
 .mode {
-  width: 16rem;
+  width: 18rem;
   padding: 1rem;
   border: 0.8px solid rgba(128, 128, 128, 0.143);
   border-radius: 5px;
@@ -60,16 +60,15 @@
     justify-content: center;
   }
 }
-@media (max-width: 1024px)
-{
-    .contactModes{
-        width: 100%;
-    }
-    .row{
-        flex-direction: column;
-        width: 100%;
-    }
-    .mode{
-        width: 100%;
-    }
+@media (max-width: 1024px) {
+  .contactModes {
+    width: 100%;
+  }
+  .row {
+    flex-direction: column;
+    width: 100%;
+  }
+  .mode {
+    width: 100%;
+  }
 }
