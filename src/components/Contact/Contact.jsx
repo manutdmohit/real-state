@@ -26,7 +26,7 @@ const Contact = () => {
                   </div>
                   <div className="flexColStart detail">
                     <span className="primaryText">Call</span>
-                    <span className="secondaryText">021 123 145 14</span>
+                    <span className="secondaryText">0421561785</span>
                   </div>
                 </div>
                 <div className="flexCenter button">Call now</div>
@@ -39,7 +39,7 @@ const Contact = () => {
                   </div>
                   <div className="flexColStart detail">
                     <span className="primaryText">Chat</span>
-                    <span className="secondaryText">021 123 145 14</span>
+                    <span className="secondaryText">0421561785</span>
                   </div>
                 </div>
                 <div className="flexCenter button">Chat now</div>
@@ -54,11 +54,16 @@ const Contact = () => {
                     <BsFillChatDotsFill size={25} />
                   </div>
                   <div className="flexColStart detail">
-                    <span className="primaryText">Video Call</span>
-                    <span className="secondaryText">021 123 145 14</span>
+                    <span className="primaryText">Email</span>
+                    <span className="secondaryText">
+                      ecofinance23@gmail.com
+                    </span>
                   </div>
                 </div>
-                <div className="flexCenter button">Video Call now</div>
+
+                <div className="flexCenter button">
+                  <a href="mailto:ecofinance23@gmail.com">Email now</a>
+                </div>
               </div>
 
               <div className="flexColCenter mode">
@@ -68,7 +73,7 @@ const Contact = () => {
                   </div>
                   <div className="flexColStart detail">
                     <span className="primaryText">Message</span>
-                    <span className="secondaryText">021 123 145 14</span>
+                    <span className="secondaryText">0421561785</span>
                   </div>
                 </div>
                 <div className="flexCenter button">Message now</div>
