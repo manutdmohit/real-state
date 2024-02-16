@@ -70,6 +70,11 @@
   height: 100%;
 }
 
+.secondaryText {
+  color: #ffffff;
+  font-size: 1.25rem;
+}
+
 /* mobile screens */
 @media (max-width: 640px) {
   .hero-container {
