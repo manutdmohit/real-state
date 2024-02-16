@@ -17,6 +17,11 @@
 .h-menu > *:hover {
   cursor: pointer;
 }
+
+.h-menu a {
+  font-size: 1.25rem;
+}
+
 .menu-icon {
   display: none;
 }
