@@ -2,6 +2,7 @@
   z-index: 99;
   position: sticky;
   top: 0;
+  max-height: 8.125rem;
 }
 .h-container {
   padding-top: 1rem;
