@@ -14,6 +14,7 @@ import Contact from './pages/Contact/Contact';
 import UserDetailContext from './context/UserDetailContext';
 import Bookings from './pages/Bookings/Bookings';
 import Favourites from './pages/Favourites/Favourites';
+import NotFound from './components/NotFound/NotFound';
 
 function App() {
   const queryClient = new QueryClient();
@@ -39,6 +40,7 @@ function App() {
                 <Route path="/contacts" element={<Contact />}></Route>
                 <Route path="/bookings" element={<Bookings />} />
                 <Route path="/favourites" element={<Favourites />} />
+                <Route path="*" element={<NotFound />} />
               </Route>
             </Routes>
           </Suspense>
