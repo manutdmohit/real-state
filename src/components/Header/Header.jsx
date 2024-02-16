@@ -6,7 +6,7 @@ import useHeaderColor from '../../hooks/useHeaderColor';
 import OutsideClickHandler from 'react-outside-click-handler';
 import { Link, NavLink } from 'react-router-dom';
 import { useAuth0 } from '@auth0/auth0-react';
-import ProfileMenu from '../ProfileMenu/ProfileMenu';
+// import ProfileMenu from '../ProfileMenu/ProfileMenu';
 import AddPropertyModal from '../AddPropertyModal/AddPropertyModal';
 import useAuthCheck from '../../hooks/useAuthCheck.jsx';
 
