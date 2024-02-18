@@ -26,6 +26,10 @@
   display: none;
 }
 
+.h-container img {
+  width: 7vw;
+}
+
 @media (max-width: 768px) {
   .menu-icon {
     display: block;
