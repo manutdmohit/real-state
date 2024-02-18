@@ -1,6 +1,6 @@
 export const getMenuStyles = (menuOpened) => {
   if (document.documentElement.clientWidth <= 800) {
-    return { right: !menuOpened && "-100%" };
+    return { right: !menuOpened && '-100%' };
   }
 };
 
@@ -32,11 +32,11 @@ export const updateFavourites = (id, favourites) => {
 };
 
 export const checkFavourites = (id, favourites) => {
-  return favourites?.includes(id) ? "#fa3e5f" : "white";
+  return favourites?.includes(id) ? '#fa3e5f' : 'white';
 };
 
 export const validateString = (value) => {
   return value?.length < 3 || value === null
-    ? "Must have atleast 3 characters"
+    ? 'Must have atleast 3 characters'
     : null;
 };
