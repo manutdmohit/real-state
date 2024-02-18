@@ -12,6 +12,10 @@
   align-items: center;
 }
 
+img {
+  width: 100px;
+}
+
 .h-menu {
   gap: 2rem;
   display: flex; /* Ensure menu items are displayed properly */
@@ -43,7 +47,7 @@
     font-weight: 500;
     flex-direction: column;
     right: 15%; /* Adjust positioning as needed */
-    top: 6rem;
+    top: 7rem;
     background: white;
     display: flex;
     border-radius: 10px;
