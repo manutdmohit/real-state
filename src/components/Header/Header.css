@@ -1,20 +1,23 @@
+/* Header.css */
 .h-wrapper {
   z-index: 99;
   position: sticky;
   top: 0;
-  margin-bottom: auto;
+  max-height: 8.125rem;
 }
 
 .h-container {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  color: var(--secondary);
+  display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .h-menu {
   gap: 2rem;
+  display: flex; /* Ensure menu items are displayed properly */
+  color: white;
 }
+
 .h-menu > *:hover {
   cursor: pointer;
 }
@@ -25,24 +28,22 @@
 
 .menu-icon {
   display: none;
-}
-
-.h-container img {
-  width: 6vw;
+  color: white;
 }
 
 @media (max-width: 768px) {
   .menu-icon {
     display: block;
+    order: 3; /* Adjust the order to move the menu icon to the right */
   }
   .h-menu {
     color: var(--black);
-    position: absolute;
+    position: fixed;
     gap: 2rem;
     font-weight: 500;
     flex-direction: column;
-    right: 4rem;
-    top: 3rem;
+    right: 15%; /* Adjust positioning as needed */
+    top: 6rem;
     background: white;
     display: flex;
     border-radius: 10px;
@@ -50,5 +51,8 @@
     align-items: flex-start;
     padding: 3rem;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+    max-height: calc(100vh - 6rem); /* Adjust the max-height as needed */
+    overflow-y: auto; /* Add this line to enable vertical scrolling when necessary */
+    order: 2; /* Adjust the order to move the menu to the left */
   }
 }

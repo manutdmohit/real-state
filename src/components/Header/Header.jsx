@@ -3,52 +3,58 @@ import './Header.css';
 import { BiMenuAltRight } from 'react-icons/bi';
 import { getMenuStyles } from '../../utils/common';
 import useHeaderColor from '../../hooks/useHeaderColor';
-import OutsideClickHandler from 'react-outside-click-handler';
 import { Link, NavLink } from 'react-router-dom';
-import { useAuth0 } from '@auth0/auth0-react';
-// import ProfileMenu from '../ProfileMenu/ProfileMenu';
-import AddPropertyModal from '../AddPropertyModal/AddPropertyModal';
-import useAuthCheck from '../../hooks/useAuthCheck.jsx';
+import OutsideClickHandler from 'react-outside-click-handler';
 
 const Header = () => {
   const [menuOpened, setMenuOpened] = useState(false);
   const headerColor = useHeaderColor();
-  const [modalOpened, setModalOpened] = useState(false);
+
+  // Function to handle menu icon click and toggle the menu
+  const handleMenuIconClick = () => {
+    setMenuOpened((prevMenuOpened) => !prevMenuOpened);
+  };
+
+  // Function to handle menu item click and close the menu
+  const handleMenuItemClick = () => {
+    setMenuOpened(false);
+  };
+
+  // Function to close the menu when clicking outside
+  const handleOutsideClick = () => {
+    setMenuOpened(false);
+  };
 
   return (
-    <section className="h-wrapper" style={{ background: headerColor }}>
-      <div className="flexCenter innerWidth paddings h-container">
+    <header className="h-wrapper" style={{ background: headerColor }}>
+      <div className="innerWidth paddings h-container">
         {/* logo */}
         <Link to="/">
           <img src="./main_logo.png" alt="logo" width={100} id="logo" />
         </Link>
 
-        {/* menu */}
-        <OutsideClickHandler
-          onOutsideClick={() => {
-            setMenuOpened(false);
-          }}
-        >
+        {/* Menu wrapped with OutsideClickHandler */}
+        <OutsideClickHandler onOutsideClick={handleOutsideClick}>
+          {/* menu */}
           <div
-            // ref={menuRef}
-            className="flexCenter h-menu"
+            className={`h-menu ${menuOpened ? 'open' : ''}`}
             style={getMenuStyles(menuOpened)}
           >
-            {/* <NavLink to="/properties">Properties</NavLink> */}
-            <NavLink to="/services">Service</NavLink>
-            <NavLink to="/contacts">Contact</NavLink>
+            <NavLink to="/services" onClick={handleMenuItemClick}>
+              Service
+            </NavLink>
+            <NavLink to="/contacts" onClick={handleMenuItemClick}>
+              Contact
+            </NavLink>
           </div>
         </OutsideClickHandler>
 
         {/* for medium and small screens */}
-        <div
-          className="menu-icon"
-          onClick={() => setMenuOpened((prev) => !prev)}
-        >
+        <div className="menu-icon" onClick={handleMenuIconClick}>
           <BiMenuAltRight size={30} />
         </div>
       </div>
-    </section>
+    </header>
   );
 };
 
