@@ -2,9 +2,9 @@
   z-index: 99;
   position: sticky;
   top: 0;
-  max-height: 8.125rem;
-  overflow: hidden;
+  margin-bottom: auto;
 }
+
 .h-container {
   padding-top: 1rem;
   padding-bottom: 1rem;
