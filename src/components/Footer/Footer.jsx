@@ -1,8 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; // Import Link component
 import './Footer.css';
+
 const Footer = () => {
   return (
-    <div className="f-wrapper">
+    <footer className="f-wrapper">
       <div className="paddings innerWidth flexCenter f-container">
         {/* left side */}
         <div className="flexColStart f-left">
@@ -12,18 +14,24 @@ const Footer = () => {
           </span>
         </div>
 
+        {/* right side */}
         <div className="flexColStart f-right">
-          <span className="primaryText">Information</span>
-          <span className="secondaryText">Sydney, Australia</span>
+          <div className="f-column">
+            <span className="primaryText">Information</span>
+            <span className="secondaryText">Sydney, Australia</span>
+          </div>
+
+          {/* Menu */}
           <div className="flexCenter f-menu">
-            <span>Property</span>
-            <span>Services</span>
-            <span>Product</span>
-            <span>About Us</span>
+            <Link to="/property">Property</Link>
+            <Link to="/contacts">Contact</Link>
+            <Link to="/services">Services</Link>
+            <Link to="/product">Product</Link>
+            <Link to="/about">About Us</Link>
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 
