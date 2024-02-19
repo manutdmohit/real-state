@@ -25,7 +25,7 @@ const Footer = () => {
           <div className="flexCenter f-menu">
             <Link to="/property">Property</Link>
             <Link to="/contacts">Contact</Link>
-            <Link to="/services">Services</Link>
+            <Link to="/services">Service</Link>
             <Link to="/product">Product</Link>
             <Link to="/about">About Us</Link>
           </div>
