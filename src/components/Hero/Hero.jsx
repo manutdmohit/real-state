@@ -19,8 +19,8 @@ const Hero = () => {
               }}
             >
               Discover <br />
-              Most Suitable
-              <br /> Property
+              Most Efficient
+              <br /> Deals
             </motion.h1>
           </div>
           <div className="flexColStart secondaryText flexhero-des">
